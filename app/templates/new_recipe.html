@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <link rel="shortcut icon" href="static/img/logo.png">
+        <link rel="stylesheet" href="static/css/slyle.css" />
+        <script
+            src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+            defer
+        ></script>
+        <script src="static/js/mane.js" defer></script>
+        <script src="static/js/current_login.js" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navigation container">
+                <div class="navigation__contant navigation__contant-login">
+                    <div class="navigation__contant-log">
+                        <a href="./index.html">
+                            <img
+                                class="navigation__logo"
+                                src="static/img/logo.png"
+                                alt="logo"
+                            />
+                        </a>
+                        <a class="navigation__contant-text" href="./index.html"
+                            >Рецепты</a
+                        >
+                    </div>
+                    <div class="navigation__btns">
+                        <div class="active" id="user-data" data-name="{{ name_user }}"></div>
+                        <a class="quit disable" href="./index.html">Выйти </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="container">
+                <form action="#" class="form__recipes">
+                    <div class="form__recipes-text">
+                        <div class="name-recipe">
+                            <h1>Введите название рецепта:</h1>
+                            <textarea ></textarea>
+                            <div id="nameError"></div>
+                        </div>
+                        <div class="ingredients">
+                            <h1>Введите ингредиенты:</h1>
+                            <textarea ></textarea>
+                            <div id="ingredientsError"></div>
+                        </div>
+                        <div class="recipe">
+                            <h1>Введите рецепт:</h1>
+                            <textarea ></textarea>
+                            <div id="recipeError"></div>
+                        </div>
+                        <div></div>
+                    </div>
+                </form>
+                <button class="btn-1" >Отправить</button>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-svgs container">
+                <a href="https://vk.com/iris_mertv"
+                    ><img src="static/img/telegram.svg" alt=""
+                /></a>
+                <a href="https://vk.com/iris_mertv"
+                    ><img src="static/img/vk.svg" alt=""
+                /></a>
+                <a href="https://vk.com/iris_mertv"
+                    ><img src="static/img/whatsapp.svg" alt=""
+                /></a>
+            </div>
+        </footer>
+    </body>
+</html>

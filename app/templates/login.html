@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <link rel="shortcut icon" href="static/img/logo.png">
+        <link rel="stylesheet" href="static/css/slyle.css" />
+        <script
+            src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+            defer
+        ></script>
+        <script src="static/js/login.js" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navigation container">
+                <div class="navigation__contant navigation__contant-login">
+                   <div class="navigation__contant-log ">
+                        <a href="./index.html">
+                            <img
+                                class="navigation__logo"
+                                src="static/img/logo.png"
+                                alt="logo"
+                            />
+                        </a>
+                        <a class="navigation__contant-text" href="./index.html"
+                            >Рецепты</a
+                        >
+                   </div>
+                    <div class="navigation__btns">
+                        <a class="navigation__login navigation__login-reg" href="./register.html"
+                            >Зарегистрироваться</a
+                        >
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="form form__login container">
+            <form action="#">
+                <div class="name">Введите вашу почту:</div>
+                <input type="email" placeholder="Email" id="emailInput"/>
+                <div id="emailError"></div>
+                <div class="name">Введите пароль:</div>
+                <input type="password" placeholder="password" id="passwordInput"/>
+                <div  id="passwordError"></div>
+                <br />
+                <br />
+            </form>
+            <button class="btn">Отправить</button>
+        </section>
+        <footer class="footer">
+            <div class="footer-svgs container">
+                <a href="https://vk.com/iris_mertv"
+                    ><img src="static/img/telegram.svg" alt=""
+                /></a>
+                <a href="https://vk.com/iris_mertv"
+                    ><img src="static/img/vk.svg" alt=""
+                /></a>
+                <a href="https://vk.com/iris_mertv"
+                    ><img src="static/img/whatsapp.svg" alt=""
+                /></a>
+            </div>
+        </footer>
+    </body>
+</html>
