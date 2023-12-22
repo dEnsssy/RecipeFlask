@@ -1,13 +1,20 @@
-function display(a,b,c,d) {
+function display(recipe) {
     const nameElement = document.getElementById('name-data');
     const ingredientsElement = document.getElementById('ingredients-data');
     const recipeElement = document.getElementById('recipe-data');
     const avtorElement = document.getElementById('avtor-data');
 
-    nameElement.innerHTML = a;
-    ingredientsElement.innerHTML = b;
-    recipeElement.innerHTML = c;
-    avtorElement.innerHTML = d;
+    nameElement.innerHTML = recipe.name_recipe;
+    ingredientsElement.innerHTML = recipe.ingredients;
+    recipeElement.innerHTML = recipe.txt_recipe;
+    avtorElement.innerHTML = recipe.login_id;
 }
 
-display(1,1,1,1)
+fetch('/current_recipe.html', {
+    method: 'POST'
+})
+    .then(response => response.json())
+    .then(data => {
+        display(data);
+    })
+display()

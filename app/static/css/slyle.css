@@ -266,6 +266,16 @@ body {
     -ms-flex-align: center;
     align-items: center;
     min-width: 100%;
+    gap: 35px;
+    padding: 20px 50px;
+}
+
+.swiper-slide-text {
+    font-size: 35px;
+    background: rgba(186, 127, 31, 0.5);
+    width: 100%;
+    padding: 9px;
+    border-radius: 10px;
 }
 
 .swiper-wrapper {
@@ -323,10 +333,6 @@ body {
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 10px;
-}
-
-input:nth-child(11) {
-    margin-bottom: 100px;
 }
 
 .form div {
@@ -390,7 +396,7 @@ input:nth-child(11) {
     border-radius: 15px;
     width: 500px;
     height: 480px;
-    margin-bottom: 90px;
+    margin-bottom: 120px;
 }
 .form__recipes-text h1 {
     margin-bottom: 10px;
@@ -401,7 +407,7 @@ input:nth-child(11) {
     font-size: 25px;
     border-radius: 20px;
     position: absolute;
-    top: 680px;
+    top: 730px;
     right: 250px;
     background: #ff9a32;
     width: 150px;
@@ -411,9 +417,12 @@ input:nth-child(11) {
     margin-top: 10px;
     margin-bottom: 10px;
     height: 634px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .error div{
-    font-size: 30px;
+    font-size: 100px;
 }
 .header-error{
     font-size: 18px;
@@ -477,6 +486,7 @@ min-height:13vw;
     padding:10px;
     border-radius:15px;
     max-width:20vw;
+    min-width:340px;
 min-height:5vw;
 }
 #recipe-data{
@@ -496,4 +506,49 @@ min-height:25vw;
 .avtor h2{
 font-size:30px;
 margin-bottom:10px;
+}
+.avtor {
+    position: absolute;
+    top: 450px;
+    left: 38px;
+}
+#nameError {
+    position:absolute;
+    top: 680px;
+    left: 48px;
+}
+#ingredientsError {
+    position:absolute;
+    top: 680px;
+    left: 580px;
+}
+#recipeError {
+    position:absolute;
+    top: 680px;
+    left: 1115px;
+}
+.rueng{
+font-size:20px;
+border:1px solid #FF9A32;
+border-radius:10px;
+background:white;
+display:flex;
+gap:2px;
+}
+
+.rueng p{
+    padding:10px;
+    height:100%;
+    cursor:pointer;
+}
+.rueng p:nth-child(1){
+    border-top-left-radius:10px;
+    border-bottom-left-radius:10px;
+    }
+.rueng p:nth-child(2){
+    border-top-right-radius:10px;
+    border-bottom-right-radius:10px;
+    }
+.activeLang{
+background:rgba(186, 127, 31, 0.5);
 }

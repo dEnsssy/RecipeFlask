@@ -1,7 +1,7 @@
 class current_login:
-    id_user = 1
-    name_user = 'Kolya'
-    email = 'asd@mail'
+    id_user = 0
+    name_user = ''
+    email = ''
 
 
 class current_id_recipe:
