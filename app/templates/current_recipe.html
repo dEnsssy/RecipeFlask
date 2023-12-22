@@ -10,7 +10,7 @@
             src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
             defer
         ></script>
-        <script src="static/js/new_recipe.js" defer></script>
+        <script src="static/js/current_recipe.js" defer></script>
         <script src="static/js/current_login.js" defer></script>
     </head>
     <body>
@@ -30,35 +30,38 @@
                         >
                     </div>
                     <div class="navigation__btns">
+                        <a class="navigation__login currentBtnRecipe" href="./login.html">Авторизация</a>
+                        <a class="navigation__login currentBtnRecipe" href="./register.html">Зарегистрироваться</a>
+                        <a class="navigation__login disableRecipe currentBtnRecipe" href="./new_recipe.html">Добавить рецепт</a>
                         <div class="disable" id="user-data" data-name="{{ name_user }}"></div>
                         <a class="quit disable" href="./index.html">Выйти </a>
                     </div>
                 </div>
             </nav>
         </header>
-        <main>
+        <main class="mainRecipe">
             <section class="container">
                 <form action="#" class="form__recipes">
                     <div class="form__recipes-text">
-                        <div class="name-recipe">
-                            <h1>Введите название рецепта:</h1>
-                            <textarea ></textarea>
-                            <div id="nameError"></div>
+                        <div class="name_recipe">
+                            <h1>Название рецепта:</h1>
+                            <div id="name-data"></div>
                         </div>
                         <div class="ingredients">
-                            <h1>Введите ингредиенты:</h1>
-                            <textarea ></textarea>
-                            <div id="ingredientsError"></div>
+                            <h1>Ингредиенты:</h1>
+                            <div  id="ingredients-data"></div>
                         </div>
                         <div class="recipe">
-                            <h1>Введите рецепт:</h1>
-                            <textarea ></textarea>
-                            <div id="recipeError"></div>
+                            <h1>Рецепт:</h1>
+                            <div  id="recipe-data"></div>
                         </div>
                         <div></div>
                     </div>
+                    <div class="avtor">
+                        <h2>Автор:</h2>
+                        <div  id="avtor-data"></div>
+                    </div>
                 </form>
-                <button class="btn-1" >Отправить</button>
             </section>
         </main>
         <footer class="footer">

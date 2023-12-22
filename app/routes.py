@@ -4,7 +4,8 @@ from app import app
 from app.SQL.login_sql import new_user, old_user
 from app.SQL.main_recipes_sql import one_recipe_name, last_recipe
 from app.SQL.new_recipe_sql import new_recipe
-from app.curr_login import current_login
+from app.show_class import current_login, current_id_recipe
+from app.SQL.current_recipe_SQL import choise_recipe
 
 
 @app.route('/', methods=['GET'])
@@ -16,6 +17,13 @@ def index_get():
 @app.route('/', methods=['POST'])
 @app.route('/index.html', methods=['POST'])
 def index_post():
+    data = request.json
+    current_id_recipe.id_recipe = data.get('id_recipe')
+    return jsonify()
+
+
+@app.route('/quit.html', methods=['POST'])
+def quit():
     current_login.id_user = 0
     current_login.name_user = ''
     current_login.email = ''
@@ -58,6 +66,7 @@ def register_post():
     email = data.get('email')
 
     if new_user(name, surname, password, email):
+        old_user(email, password)
         return jsonify({'success': True})
     else:
         return jsonify({'success': False, 'error': 'Такая почта уже зарегистрирована'})
@@ -89,6 +98,19 @@ def new_recipe_post():
 
     if new_recipe(login_id, name_recipe, ingredients, txt_recipe):
         return jsonify({'success': True})
+
+
+@app.route('/current_recipe.html', methods=['GET'])
+def current_recipe_get():
+    return render_template("current_recipe.html", name_user=current_login.name_user)
+
+
+@app.route('/current_recipe.html', methods=['POST'])
+def current_recipe_post():
+    recipe = choise_recipe(current_id_recipe.id_recipe)
+    login_id, name_recipe, ingredients, txt_recipe = recipe[0], recipe[1], recipe[2], recipe[3]
+    return jsonify({'login_id': login_id, 'name_recipe': name_recipe, 'ingredients': ingredients,
+                    'txt_recipe': txt_recipe})
 
 
 @app.route('/get_last_recipe_data')
